@@ -1,0 +1,63 @@
+.table {
+	position: relative;
+	text-align: center;
+}
+
+.header {
+    background-color: #424242;
+    color: #eee;
+}
+
+.body {
+	height: 300px;
+	overflow-y: scroll;
+}
+
+.body > .row:nth-child(even) {
+    background-color: rgba(66, 66, 66, 0.8);
+    color: #fff;
+}
+
+.body > .row:nth-child(odd) {
+    background-color: rgba(66, 66, 66, 0.7);
+    color: #fff;
+}
+
+.cell {
+	width: 5%;
+	padding: 8px;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.cell.cell-name, .cell.cell-created, .cell.cell-edited, .cell.cell-homeworld {
+	width: 20%;
+}
+
+.cell.cell-homeworld a {
+	color: #fff !important;
+	text-decoration: none;
+}
+
+.table .loader {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	visibility: hidden;
+	position: absolute;
+	width: 100%;
+	height: calc(100% - 30px);
+	top: 30px;
+	left: 0px;
+	background-color: rgba(0, 0, 0, 0.7);
+	text-align: center;
+	color: #ddd;
+}
+
+.table .loader.show {
+	visibility: visible;
+}
+
+.value-text-red {
+	color: #FF5722;
+}
